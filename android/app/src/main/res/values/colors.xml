@@ -1,0 +1,83 @@
+<resources>
+  <!-- Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually -->
+  <color name="splashscreen_background">#FAC030</color>
+  <color name="white">#FFF</color>
+
+  <!--  stickers-->
+  <color name="lightBlue">#4286f4</color>
+  <color name="darkBlue">#3065ba</color>
+  <color name="xBlue">#6200ec</color>
+  <color name="xxBlue">#3800b2</color>
+  <color name="lightRed">#f44141</color>
+  <color name="darkRed">#cc3939</color>
+
+  <color name="colorPrimary">#E84F1F</color>
+  <color name="colorPrimaryDark">#BC2D00</color>
+  <color name="colorAccent">#ffffff</color>
+  <color name="inactiveAddButtonColor">#B3B3B3</color>
+  <color name="infoPageBackgroundColor">#EBEBEB</color>
+  <color name="actionBarArrowColor">@color/colorAccent</color>
+<!--  <color name="white">#ffffff</color>-->
+  <color name="white_tran">#68ffffff</color>
+  <color name="colorBlack">#353434</color>
+  <color name="colorEnableFalse">#434141</color>
+  <color name="colorBlackLight">#fadedcdc</color>
+  <color name="colorgraylight_card">#64e6e5e5</color>
+  <color name="textGray">#292828</color>
+  <!--Color list for brush && Text-->
+  <color name="black">#000000</color>
+  <color name="black_transperent">#aa000000</color>
+  <color name="blue_color_picker">#0066FF</color>
+  <color name="brown_color_picker">#AF593E</color>
+  <color name="green_color_picker">#01A368</color>
+  <color name="orange_color_picker">#FF861F</color>
+  <color name="red_color_picker">#ED0A3F</color>
+  <color name="red_orange_color_picker">#FF3F34</color>
+  <color name="sky_blue_color_picker">#76D7EA</color>
+  <color name="violet_color_picker">#8359A3</color>
+  <color name="yellow_color_picker">#FBE870</color>
+  <color name="yellow_green_color_picker">#C5E17A</color>
+  <color name="tool_bg">#151414</color>
+
+  <color name="yellow">#fff213</color>
+  <color name="red">#fa0509</color>
+  <color name="blue">#4235fc</color>
+  <color name="green">#42fa10</color>
+  <color name="pink">#b904bc</color>
+  <color name="orange">#ed6002</color>
+  <color name="darkred">#b32751</color>
+  <color name="darkgreen">#07601e</color>
+  <color name="purple">#9c27b0</color>
+  <color name="deepPurple">#673ab7</color>
+  <color name="indigo">#3f51b5</color>
+  <color name="cyan">#00bcd4</color>
+  <color name="teal">#009688</color>
+  <color name="lightGreen">#8bc34a</color>
+  <color name="lime">#cddc39</color>
+  <color name="amber">#ffc107</color>
+  <color name="deepOrange">#ff5722</color>
+  <color name="brown">#795548</color>
+
+  <color name="blueGray">#607d8b</color>
+
+  <color name="green_orignal">#008000</color>
+  <color name="green_whatsapp">#115E53</color>
+  <color name="light_gray">#fa898888</color>
+
+  <color name="grayicon">#F7555353</color>
+  <color name="bottomnavigation_white_tran">@color/xBlue</color>
+
+  <!--stickers list from server-->
+  <color name="lightgray">#f6f6f6</color>
+  <color name="gray">#e8e8e8</color>
+  <color name="textcolor">#adadad</color>
+  <color name="textcolor_">#636363</color>
+  <color name="black_light">#777777</color>
+
+<!--tf-->
+  <color name="tfe_color_primary">#ffa800</color>
+  <color name="tfe_color_primary_dark">#ff6f00</color>
+  <color name="tfe_color_accent">#425066</color>
+
+  <color name="tfe_is_color_light_gray">#E4E4E4</color>
+</resources>

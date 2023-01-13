@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/xBlue"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/preview_side_margin"
+        android:layout_marginLeft="@dimen/preview_side_margin"
+        android:layout_marginEnd="@dimen/preview_side_margin"
+        android:layout_marginRight="@dimen/preview_side_margin"
+        android:layout_marginBottom="24dp">
+
+        <RelativeLayout
+            android:id="@+id/tray_image_layout"
+            android:layout_width="@dimen/sticker_pack_details_image_size"
+            android:layout_height="@dimen/sticker_pack_details_image_size"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/tray_image"
+                android:layout_width="@dimen/sticker_pack_details_image_size"
+                android:layout_height="@dimen/sticker_pack_details_image_size"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/tray_image_content_description"
+                android:padding="@dimen/sticker_pack_details_image_padding"
+                android:src="@color/colorAccent"
+                tools:src="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/edit_stickericon"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/roundbg_green">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_edit" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tray_image_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/pack_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_from_tray_to_name"
+                android:layout_marginLeft="@dimen/margin_from_tray_to_name"
+                android:background="@null"
+                android:enabled="false"
+                android:padding="3dp"
+                android:textColor="@drawable/edit_text_selector"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="@string/label_pack_name" />
+
+            <EditText
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_from_tray_to_name"
+                android:layout_marginLeft="@dimen/margin_from_tray_to_name"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:enabled="false"
+                android:paddingLeft="3dp"
+                android:textColor="@drawable/edit_text_selector"
+                android:textSize="14sp"
+                tools:text="@string/label_author" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/edit_stickerpack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/add_button_content_description"
+                android:padding="@dimen/_4sdp"
+                app:tint="@color/colorPrimaryDark"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/plus_icon_add_sticker"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/add_button_content_description"
+                android:scaleType="center"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_add" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.agrohi.kulik.wastickers.activities.BottomFadingRecyclerView
+            android:id="@+id/sticker_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fadingEdgeLength="@dimen/fading_edge_length"
+            android:paddingStart="@dimen/preview_side_margin"
+            android:paddingLeft="@dimen/preview_side_margin"
+            android:paddingEnd="@dimen/preview_side_margin"
+            android:paddingRight="@dimen/preview_side_margin"
+            android:requiresFadingEdge="vertical" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.1"
+            android:background="#000000"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/preview_side_margin"
+        android:layout_marginLeft="@dimen/preview_side_margin"
+        android:layout_marginEnd="@dimen/preview_side_margin"
+        android:layout_marginRight="@dimen/preview_side_margin">
+
+        <TextView
+            android:id="@+id/already_added_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/_9sdp"
+            android:text="@string/details_pack_already_added"
+            android:textColor="#9B9B9B"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:id="@+id/add_to_whatsapp_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green_whatsapp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/StickerPreviewButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:drawableStart="@mipmap/sticker_3rdparty_wa"
+                    android:drawableLeft="@mipmap/sticker_3rdparty_wa"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:foreground="@android:color/transparent"
+                    android:text="@string/add_to_whatsapp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/downloadStickerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/StickerPreviewButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:foreground="@android:color/transparent"
+                    android:text="Download Sticker" />
+            </FrameLayout>
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <!-- <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/adView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom|center_horizontal"
+             ads:adSize="BANNER"
+             ads:adUnitId="@string/admob_banner_packview_unit_id"></com.google.android.gms.ads.AdView>-->
+    </FrameLayout>
+</LinearLayout>

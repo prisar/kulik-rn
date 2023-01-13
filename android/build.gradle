@@ -1,0 +1,77 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        buildToolsVersion = "30.0.2"
+        minSdkVersion = 21
+        compileSdkVersion = 30
+        targetSdkVersion = 30
+        ndkVersion = "21.0.6113669"
+        
+        googlePlayServicesVersion = "+"
+        firebaseMessagingVersion = "+"
+        // reactNativeFFmpegPackage = "min"
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        // https://stackoverflow.com/questions/62969917/how-do-i-fix-unexpected-element-queries-found-in-manifest
+        classpath("com.android.tools.build:gradle:4.1.0")
+
+        classpath("com.google.gms:google-services:4.3.3")
+
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.0'
+        
+        // Add the dependency for the Performance Monitoring plugin
+        classpath 'com.google.firebase:perf-plugin:1.3.1'  // Performance Monitoring plugin
+
+        //--------- photo editor
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
+        classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
+
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.71'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url("$rootDir/../node_modules/react-native/android")
+        }
+        maven {
+            // Android JSC is installed from npm
+            url("$rootDir/../node_modules/jsc-android/dist")
+        }
+
+        maven { url 'https://maven.google.com' }
+
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex')) {
+                details.useVersion '29.0.2'
+            }
+        }
+    }
+
+    ext {
+        supportLibraryVersion = '29.0.2'
+        PUBLISH_GROUP_ID = 'com.theartofdev.edmodo'
+        PUBLISH_ARTIFACT_ID = 'android-image-cropper'
+        PUBLISH_VERSION = '2.8.0'
+    }
+}

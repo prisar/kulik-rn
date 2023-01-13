@@ -1,0 +1,32 @@
+{
+  "name": "Agrohi",
+  "displayName": "আগ্রহি",
+  "expo": {
+    "name": "agrohi",
+    "slug": "agrohi",
+    "sdkVersion": "40.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./app/assets/images/banner.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#bd4131"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.agrohi.kulik"
+    }
+  }
+}

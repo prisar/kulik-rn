@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_stickersList"
+        android:icon="@drawable/ic_bottomnavigation_stickerlist"
+        android:title="@string/label_stickers_list"/>
+
+    <item
+        android:id="@+id/navigation_stickermaker"
+        android:icon="@drawable/ic_bottomnavigation_stickermaker"
+        android:title="@string/label_sticker_maker" />
+
+</menu>

@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Kulik</string>
+
+    <!--    stickers-->
+    <string name="share_pack">Share Pack</string>
+
+    <string name="tray_image_content_description">Sticker Pack Tray Image</string>
+    <string name="more_info_button">More info about stickers pack</string>
+    <string name="add_to_whatsapp">Add to WhatsApp</string>
+    <string name="add_button_content_description">Add stickers pack to WhatsApp</string>
+    <string name="title_activity_sticker_packs_list">Sticker Packs for WhatsApp</string>
+    <string name="dot">•</string>
+    <string name="title_activity_sticker_pack_list">Sticker Packs Details</string>
+    <string name="title_activity_sticker_pack_details_multiple_pack">Pack Details</string>
+    <string name="title_activity_info">Info</string>
+    <string name="view_webpage">View webpage</string>
+    <string name="send_email">Send email</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="error_adding_sticker_pack">Could not add this stickers pack. Please install the latest version of WhatsApp before adding stickers pack</string>
+    <string name="error_message">Error: %s \nSee logcat for stack trace.</string>
+    <string name="title_validation_error">Error with the pack</string>
+    <string name="info_screen_tray_icon">Tray icon</string>
+    <string name="details_pack_already_added">Sticker pack added to WhatsApp</string>
+    <string name="info_send_email_to_prompt">Send email with</string>
+    <string name="add_pack_fail_prompt_update_whatsapp">Sticker pack not added. If you\'d like to add it, make sure you update to the latest version of WhatsApp.</string>
+    <string name="add_pack_fail_prompt_update_play_link">Update</string>
+    <string name="cannot_find_play_store">Google Play is not installed on the device.</string>
+    <string name="label_privacy_policy">Privacy Policy</string>
+    <string name="title_activity_ownsticker">Sticker Maker</string>
+
+    <string name="txtdecoration">Decoration</string>
+    <string name="txttext">Text</string>
+    <string name="txtemojies">Emoji</string>
+    <string name="txtbrush">Brush</string>
+    <string name="txtMove">Move</string>
+    <string name="txteraser">Eraser</string>
+    <string name="search">Search</string>
+    <string name="delete_sticker_dialog_title">Are you sure you want to delete this stickers?</string>
+    <string name="label_warning">Warning</string>
+    <string name="label_required_min_sticker_before_publish">You need to have at least 3 stickers in your pack before you can publish.</string>
+    <string name="label_sure_want_to_delete">Are you sure you want to delete this stickers pack?</string>
+    <string name="label_yes_delete">Yes, Delete</string>
+    <string name="txt_assetsFontFolderName">All_Fonts/</string>
+    <string name="txt_stickerFolderName">All_Stickers</string>
+    <string name="txt_isLoadDefaultPackList">isLoadDefaultPackList</string>
+    <string name="label_find_more_sticker">Find More Stickers</string>
+    <string name="label_find_more_apps">Find More Apps</string>
+    <string name="label_find_1000plusmore_sticker">Find More 1000+ Stickers</string>
+    <string name="label_app">App</string>
+    <string name="label_share_app">Share App</string>
+    <string name="label_rate_app">Rate App</string>
+    <string name="label_offset">Offset</string>
+    <string name="label_size">Size</string>
+    <string name="label_done">Done</string>
+    <string name="label_close">Close</string>
+    <string name="label_open">Open</string>
+    <string name="label_opacity">Opacity</string>
+    <string name="label_brush">Brush</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="label_pack_name">Pack Name</string>
+    <string name="label_author">Author</string>
+
+    <string name="label_sticker_maker">Sticker Maker</string>
+    <string name="label_stickers_list">Sticker Packs</string>
+
+    <string name="Sticker">Sticker</string>
+    <string name="MORE">MORE</string>
+    <string name="EXPLORE">EXPLORE</string>
+    <string name="CREATE">CREATE</string>
+    <string name="SAVED">SAVED</string>
+    <string name="tab_label_explore">Explore</string>
+    <string name="tab_label_saved">Saved</string>
+    <string name="label_catIconName">cat_icon.png</string>
+    <string name="label_downloading_sticker">Downloading sticker pack</string>
+    <string name="label_no_internet_connection">Internet not available, Please check your internet connectivity and try again</string>
+
+    <string name="admobAppId">ca-app-pub-6385697235558064~2935991588</string>
+    <string name="bannerAdUnitId">ca-app-pub-6385697235558064/8898764708</string>
+
+    <!--    tf-->
+    <string name="tfe_is_app_name" translatable="false">TFL Image Segmentation</string>
+    <string name="tfe_is_gpu" translatable="false">GPU</string>
+    <string name="tfe_is_re_run_model" translatable="false">Re-run model</string>
+    <string name="tfe_is_labels_found" translatable="false">Labels Found</string>
+    <string name="tfe_is_no_labels_found" translatable="false">No Labels Found</string>
+</resources>

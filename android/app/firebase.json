@@ -1,0 +1,11 @@
+{
+  "react-native": {
+    "crashlytics_auto_collection_enabled": false
+  },
+  "react-native": {
+    "crashlytics_debug_enabled": true
+  },
+  "react-native": {
+    "crashlytics_ndk_enabled": true
+  }
+}
